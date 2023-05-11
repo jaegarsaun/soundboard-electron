@@ -1,0 +1,189 @@
+:root {
+  --gradient-bottom: #333a50;
+  --gradient-top: #13293d;
+}
+/*Custom font family from fonts/gg-sans*/
+@font-face {
+  font-family: "gg-sans";
+  src: url("fonts/gg-sans/ggsans-ExtraBold.ttf");
+}
+@font-face{
+  font-family: "gg-sans-light";
+  src: url("fonts/gg-sans/ggsans-Medium.ttf");
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsla(0,0%,0%,0.6);
+  /* background: rgb(6, 30, 54); */
+  background: linear-gradient(hsla(226, 95.8%, 27.8%, 1), hsla(226, 95.8%, 27.8%, 1) 120px,hsla(268, 74.9%, 34.3%, 1) );
+  height: 100vh;
+  width: 100%;
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  padding: 17px;
+
+  background-color: hsla(0,0%,0%,0.6);
+}
+.main-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.496);
+  border-radius: 8px;
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+  border: 1px solid #944dff74;
+  padding: 10px;
+}
+
+.settings {
+  height: 40vh;
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.panel{
+    width: 100%;
+    height: calc(100% - 20px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdowns{
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.dropdown{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+form{
+  width: 100%;
+}
+label{
+  color:#ffffffb8;
+  font-size: 12px;
+  font-family: "gg-sans-light", Helvetica,Arial,sans-serif;
+  margin-right: 10px;
+
+}
+select{
+  flex-grow: 1;
+}
+.sounds {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.t-text {
+  font-size: 12px;
+  color: white;
+  /*custom gg sans font*/
+  font-family: "gg-sans", Helvetica,Arial,sans-serif;
+  margin-right: 10px;
+}
+.line {
+  display: flex;
+  flex-grow: 1;
+  height: 2px;
+  background-color: #ffffff3e;
+}
+
+.sound-files {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  overflow-y: scroll; /* make the container scrollable */
+  width: 100%;
+  scroll-behavior: smooth;
+
+}
+
+.sound-item {
+  height: 50px;
+  width: 100%;
+  border: 1px solid #ffffff3e;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* include padding and borders in element's height and width */
+  padding: 10px; /* add some padding to the sound-item element */
+  flex-shrink: 0; /* Disable shrinking of sound-item elements */
+  flex-grow: 0; /* Disable growing of sound-item elements */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+
+.left , .right{
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.sound-name{
+  color: white;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 10px;
+}
+.left{
+  justify-content: flex-start;
+}
+.right{
+  color: white;
+  font-size: 25px;
+  justify-content: flex-end;
+  cursor: pointer;
+  align-items: center;
+}
+.btn{
+  padding: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.icon{
+  fill: white;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+
