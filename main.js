@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, desktopCapturer } = require('electron');
 const path = require('path')
  
 app.commandLine.appendSwitch('disable-site-isolation-trials');
@@ -9,6 +9,7 @@ const createWindow = () => {
         width: 400,
         height: 600,
         webPreferences: {
+            nodeIntegration: true,
             preload: path.join(__dirname, 'preload.js')
         }
     })
@@ -41,3 +42,31 @@ app.on('window-all-closed', () => {
 ipcMain.on('getWebContents', (event) => {
     event.returnValue = mainWindow.webContents;
   });
+ // Handle device selection from the renderer process
+ ipcMain.on('selectDevice', (event, deviceId) => {
+    playAudioThroughDevice(deviceId);
+  });
+  // Play audio through the selected device
+function playAudioThroughDevice(deviceId, audioFilePath) {
+    desktopCapturer.getSources({ types: ['audio'] }).then(async (sources) => {
+      for (const source of sources) {
+        if (source.id === deviceId) {
+          const stream = await navigator.mediaDevices.getUserMedia({
+            audio: {
+              mandatory: {
+                chromeMediaSource: 'desktop',
+                chromeMediaSourceId: source.id,
+              },
+            },
+          });
+  
+          const audio = new Audio(audioFilePath);
+          audio.srcObject = stream;
+          audio.play();
+  
+          break;
+        }
+      }
+    });
+  }
+  
