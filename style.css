@@ -57,6 +57,7 @@ body {
     height: calc(100% - 20px);
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .dropdowns{
@@ -68,6 +69,23 @@ body {
     align-items: center;
     justify-content: space-between;
 
+}
+.config-btn{
+  width: 100%;
+  height: 40px;
+
+  background-color: transparent;
+  border: 1px solid #944dff74;
+  border-radius: 5px;
+
+  color: white;
+  font-size: 12px;
+  font-family: "gg-sans-light", Helvetica,Arial,sans-serif;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 .dropdown{
   display: flex;

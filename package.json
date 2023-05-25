@@ -17,7 +17,8 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "sqlite3": "^5.1.6"
   },
   "permissions": {
     "audio-capture": true,
@@ -35,5 +36,4 @@
     "pointerLock": true,
     "video-capture": true
   }
-
 }

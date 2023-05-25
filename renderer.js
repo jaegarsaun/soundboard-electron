@@ -34,6 +34,7 @@
     }
 })();
 
+// Playing audio
 // Get the play button elements
 const playButtons = document.querySelectorAll('#play');
 
@@ -55,11 +56,9 @@ playButtons.forEach((button) => {
             } else {
                 console.error('setSinkId() is not supported in this browser.');
             }
-
             try{
                 // Play the audio
                 await audio.play();
-                console.log(`Audio is playing through ${audio.sinkId}.`);
             }catch(err){
                 console.log(err)
             }

@@ -39,6 +39,9 @@
                             </div>
                         </form>
                     </div>
+                    <div class="config-btns">
+                        <button class="config-btn" id="add-sound">ADD SOUND</button>
+                    </div>
                     <!-- Buttons section -->
                 </div>
             </div>
@@ -51,34 +54,36 @@
                 </div>
                 <!-- Box Content ( All of the sound files they upload ) -->
                 <div class="sound-files">
-                    <!-- The individual sound item -->
-                    <div class="sound-item">
+                    <template class="sound-template">
+                        <!-- The individual sound item -->
+                        <div class="sound-item">
 
-                        <!-- Sounds name -->
-                        <div class="left">
-                            <p class="sound-name" id="1">chime.mp3</p>
-                        </div>
-                        <div class="right">
-                            <!-- Play / Delete btns -->
-                            <button class="btn" value="1" id="delete">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="20" viewBox="0 96 960 960"
-                                    width="20">
-                                    <path
-                                        d="M261 936q-24.75 0-42.375-17.625T201 876V306h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438V306ZM367 790h60V391h-60v399Zm166 0h60V391h-60v399ZM261 306v570-570Z" />
-                                </svg>
-                            </button>
+                            <!-- Sounds name -->
+                            <div class="left">
+                                <p class="sound-name" id="1">chime.mp3</p>
+                            </div>
+                            <div class="right">
+                                <!-- Play / Delete btns -->
+                                <button class="btn" value="1" id="delete">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="20"
+                                        viewBox="0 96 960 960" width="20">
+                                        <path
+                                            d="M261 936q-24.75 0-42.375-17.625T201 876V306h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438V306ZM367 790h60V391h-60v399Zm166 0h60V391h-60v399ZM261 306v570-570Z" />
+                                    </svg>
+                                </button>
 
-                            <button class="btn" value="1" id="play"">
+                                <button class="btn" value="1" id="play"">
                                 <!-- Audio File -->
-                                <audio src="./sounds/chime.mp3" id="1"></audio>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="25" viewBox="0 96 960 960"
-                                    width="25">
-                                    <path
-                                        d="M366 824q-15 10-30.5 1T320 798V348q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366 824Z" />
-                                </svg>
-                            </button>
+                                <audio src=" ./sounds/chime.mp3" id="1"></audio>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="25"
+                                        viewBox="0 96 960 960" width="25">
+                                        <path
+                                            d="M366 824q-15 10-30.5 1T320 798V348q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366 824Z" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </template>
                 </div>
 
             </div>
