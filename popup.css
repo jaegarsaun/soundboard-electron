@@ -1,0 +1,95 @@
+:root {
+    --gradient-bottom: #333a50;
+    --gradient-top: #13293d;
+  }
+  /*Custom font family from fonts/gg-sans*/
+  @font-face {
+    font-family: "gg-sans";
+    src: url("fonts/gg-sans/ggsans-ExtraBold.ttf");
+  }
+  @font-face{
+    font-family: "gg-sans-light";
+    src: url("fonts/gg-sans/ggsans-Medium.ttf");
+  }
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: hsla(0,0%,0%,0.6);
+    /* background: rgb(6, 30, 54); */
+    background: linear-gradient(hsla(226, 95.8%, 27.8%, 1), hsla(226, 95.8%, 27.8%, 1) 120px,hsla(268, 74.9%, 34.3%, 1) );
+    height: 100vh;
+    width: 100%;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    padding: 17px;
+  
+    background-color: hsla(0,0%,0%,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-contain{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form{
+    width: 100%;
+  }
+  .form-cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  label{
+    color:#ffffffb8;
+    font-size: 12px;
+    font-family: "gg-sans-light", Helvetica,Arial,sans-serif;
+    margin-right: 10px;
+    width: 20px;
+  
+  }
+  input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ffffffb8;
+    background-color: transparent;
+    color: #ffffffb8;
+    font-size: 12px;
+    font-family: "gg-sans", Helvetica,Arial,sans-serif;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+
+/* input for type file */
+input[type="file"]{
+  display: none;
+}
+
+.inputfile{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ffffffb8;
+    background-color: transparent;
+    color: #ffffffb8;
+    font-size: 12px;
+    font-family: "gg-sans", Helvetica,Arial,sans-serif;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

@@ -33,6 +33,15 @@
             });
     }
 })();
+// Adding sound files
+// Listen for button click on #add-sound
+document.getElementById("add-sound").addEventListener("click", () => {
+    // Open a pop-up window with dev tools enabled
+    window.open("popup.html", "Add Sound", "width=400,height=200", openDevTools=true);
+    
+    // window.open("popup.html", "Add Sound", "width=400,height=200" );
+
+})
 
 // Playing audio
 // Get the play button elements

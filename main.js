@@ -25,6 +25,9 @@ const createWindow = () => {
 }
 
 
+
+
+
 // When the app is ready, call the createWindow function
 app.whenReady().then(() => {
     createWindow()
