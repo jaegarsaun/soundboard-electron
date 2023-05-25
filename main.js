@@ -42,31 +42,7 @@ app.on('window-all-closed', () => {
 ipcMain.on('getWebContents', (event) => {
     event.returnValue = mainWindow.webContents;
   });
- // Handle device selection from the renderer process
- ipcMain.on('selectDevice', (event, deviceId) => {
-    playAudioThroughDevice(deviceId);
-  });
-  // Play audio through the selected device
-function playAudioThroughDevice(deviceId, audioFilePath) {
-    desktopCapturer.getSources({ types: ['audio'] }).then(async (sources) => {
-      for (const source of sources) {
-        if (source.id === deviceId) {
-          const stream = await navigator.mediaDevices.getUserMedia({
-            audio: {
-              mandatory: {
-                chromeMediaSource: 'desktop',
-                chromeMediaSourceId: source.id,
-              },
-            },
-          });
-  
-          const audio = new Audio(audioFilePath);
-          audio.srcObject = stream;
-          audio.play();
-  
-          break;
-        }
-      }
-    });
-  }
+
+
+
   

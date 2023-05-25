@@ -18,5 +18,22 @@
   "dependencies": {
     "font-awesome": "^4.7.0",
     "fs": "^0.0.1-security"
+  },
+  "permissions": {
+    "audio-capture": true,
+    "audio-input": true,
+    "browser": true,
+    "clipboard-read": true,
+    "clipboard-write": true,
+    "desktop-capture": true,
+    "display-capture": true,
+    "geolocation": true,
+    "midi": true,
+    "midi-sysex": true,
+    "nativeMessaging": true,
+    "notifications": true,
+    "pointerLock": true,
+    "video-capture": true
   }
+
 }
