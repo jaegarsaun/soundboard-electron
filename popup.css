@@ -93,3 +93,6 @@ input[type="file"]{
     align-items: center;
     cursor: pointer;
 }
+input[type=text]:focus{
+    outline: none;
+}
